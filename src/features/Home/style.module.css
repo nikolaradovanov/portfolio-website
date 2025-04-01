@@ -1,0 +1,61 @@
+.container {
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container .leftSide {
+  padding: 30px 20px 30px 20px;
+  border: 3px solid var(--white);
+  border-radius: 80px 0 80px 0;
+  box-shadow: -10px -5px var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  color: var(--primary);
+}
+
+.container .leftSide .cardName{
+  font-size: 25px;
+}
+
+.container .leftSide .avatar {
+  border: 2px solid var(--primary);
+}
+
+.container .leftSide .downloadBtn {
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 18px;
+}
+
+.container .leftSide .downloadBtn svg {
+  fill: var(--black);
+}
+
+.container .leftSide .cardItemsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container .leftSide .cardItemsContainer .cardItem {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.container .leftSide .cardItemsContainer .cardItem svg {
+  fill: var(--primary)
+}
+
+.container .rightSide {
+
+}
+
+.container .centralContent {
+
+}

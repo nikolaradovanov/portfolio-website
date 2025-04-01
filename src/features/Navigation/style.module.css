@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid var(--gray);
 }
 
 .navContainer .logoName {
@@ -12,7 +13,7 @@
   cursor: pointer;
   user-select: none;
   font-weight: 500;
-  color: var(--primary);
+  color: var(--white);
 }
 
 .navContainer .navActions {
@@ -43,8 +44,10 @@
     color: var(--primary);
 }
 
-.navContainer .navActions .navigationLinks path:hover {
-    text-decoration: underline;
+.navContainer .navActions svg {
     fill: var(--primary);
 }
 
+.navContainer .navActions svg:hover {
+  fill: var(--white);
+}

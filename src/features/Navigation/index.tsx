@@ -49,13 +49,13 @@ export const NavigationBar = () => {
           </Link>
         </div>
         <div>
-          <IconButton>
+          <IconButton href="https://github.com/nikolaradovanov" target="_blank">
             <GitHubIcon fontSize="large" color="primary" />
           </IconButton>
-          <IconButton>
+          <IconButton href="https://www.linkedin.com/in/radovanovic-nikola" target="_blank">
             <LinkedInIcon fontSize="large" color="primary" />
           </IconButton>
-          <IconButton>
+          <IconButton href="mailto:ovdebeli@gmail.com">
             <EmailIcon fontSize="large" color="primary" />
           </IconButton>
         </div>
