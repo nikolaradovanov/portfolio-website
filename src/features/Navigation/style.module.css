@@ -1,0 +1,50 @@
+.navContainer {
+  height: 100px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navContainer .logoName {
+  font-size: 32px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.navContainer .navActions {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.navContainer .navActions .navigationLinks {
+    display: flex;
+    gap: 20px;
+    line-height: 45px;
+}
+
+.navContainer .navActions .navigationLinks a {
+  font-size: 24px;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.navContainer .navActions .navigationLinks a.active {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+.navContainer .navActions .navigationLinks a:hover {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+.navContainer .navActions .navigationLinks path:hover {
+    text-decoration: underline;
+    fill: var(--primary);
+}
+
