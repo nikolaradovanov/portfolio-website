@@ -1,23 +1,27 @@
 import Styles from "./style.module.css";
+import { Skill as SkillType } from "./index";
 
-export const SkillCard = () => {
-    return (
-        <div className={Styles.card}>
-            <div className={Styles.image}>
-                <img
-                    src="http://1.bp.blogspot.com/-EhPr4LXcywE/Udr594sPHTI/AAAAAAAAAJ4/Tv4y4CBLTPM/s400/Cristina-Otero-2.jpg"
-                    alt="Profile"
-                />
-            </div>
-            <div className={Styles.details}>
-                <div className={Styles.center}>
-                    <h1>
-                        Someone famous<br />
-                        <span>team leader</span>
-                    </h1>
-                    <p>Lorem ipsum is simple dummy text on the printing and typesetting industry.</p>
-                </div>
-            </div>
+export const SkillCard = ({ skill }: { skill: SkillType }) => {
+  return (
+    <div className={Styles.card}>
+      <div className={Styles.cover}>
+        <div className={Styles.coverTitle}>
+          <h3>{skill.name}</h3>
         </div>
-    );
+        {skill.icon}
+      </div>
+      <div className={Styles.details}>
+        <div className={Styles.detailsTitle}>
+          <h3>Technical Areas</h3>
+        </div>
+        <div className={Styles.knowledgeList}>
+          {skill.knowledgeList.map((knowledge, index) => (
+            <div key={index} className={Styles.knowledge}>
+              {`• ${knowledge}`}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };

@@ -1,50 +1,71 @@
-import { SkillCard } from "./skillCard";
+import { SkillCard } from "./SkillCard";
 import Styles from "./style.module.css";
 import { motion } from "framer-motion";
+import { SpringSvg } from "./Icons/spring";
+import { SpringBootSvg } from "./Icons/spring-boot";
+import { JSX } from "react";
 
-// Dummy data
-const skillList = Array.from({ length: 12 });
-
-// Group skills into rows of 4
-const chunkArray = (arr: any[], size: number) => {
-  const chunks = [];
-  for (let i = 0; i < arr.length; i += size) {
-    chunks.push(arr.slice(i, i + size));
-  }
-  return chunks;
+export type Skill = {
+  name: string;
+  icon: JSX.Element;
+  knowledgeList: string[];
 };
 
-export const Skills = () => {
-  const rows = chunkArray(skillList, 4);
+const skillList: Skill[] = [
+  {
+    name: "JavaScript",
+    icon: <SpringSvg />,
+    knowledgeList: [
+      "Vite",
+      "Jest",
+      "Cypress",
+      "Firebase",
+      "Azure",
+      "AWS",
+      "Kubernetes",
+      "Terraform",
+      "RabbitMQ",
+      "Elasticsearch",
+      "Redis",
+      "Socket.IO",
+      "Deno",
+      "Three.js",
+      "Electron",
+      "Figma",
+      "Storybook",
+      "Jira",
+    ],
+  },
+  { name: "HTML", icon: <SpringSvg />, knowledgeList: ["CSS", "JavaScript"] },
+  { name: "CSS", icon: <SpringSvg />, knowledgeList: ["HTML", "JavaScript"] },
+  { name: "TypeScript", icon: <SpringSvg />, knowledgeList: ["JavaScript"] },
+  { name: "React", icon: <SpringSvg />, knowledgeList: ["JavaScript"] },
+  { name: "Node.js", icon: <SpringSvg />, knowledgeList: ["JavaScript"] },
+  { name: "Python", icon: <SpringSvg />, knowledgeList: ["JavaScript"] },
+  { name: "Java", icon: <SpringBootSvg />, knowledgeList: ["JavaScript"] },
+  { name: "Linux", icon: <SpringBootSvg />, knowledgeList: ["JavaScript"] },
+  { name: "Git", icon: <SpringBootSvg />, knowledgeList: ["JavaScript"] },
+  { name: "Docker", icon: <SpringBootSvg />, knowledgeList: ["JavaScript"] },
+];
 
+export const Skills = () => {
   return (
-    <div className={Styles.grid}>
-      {rows.map((row, rowIndex) => (
-        <motion.div
-          key={rowIndex}
-          className={Styles.row}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: rowIndex * 0.2 }}
-          viewport={{ once: true, amount: 0.3 }} // triggers only when 20% of row is visible
-        >
-          {row.map((_, index) => (
-            <motion.div
-              key={index}
-              className={Styles.cardWrapper}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.4,
-                delay: index * 0.1,
-              }}
-              viewport={{ once: true }}
-            >
-              <SkillCard />
-            </motion.div>
-          ))}
-        </motion.div>
-      ))}
-    </div>
+    <>
+      <h2 className={Styles.skillsSectionTitle}>Skills</h2>
+      <div className={Styles.grid}>
+        {skillList.map((skill, rowIndex) => (
+          <motion.div
+            key={rowIndex}
+            className={Styles.row}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 1 }}
+          >
+            <SkillCard skill={skill} />
+          </motion.div>
+        ))}
+      </div>
+    </>
   );
 };
