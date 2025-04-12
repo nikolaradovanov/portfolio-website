@@ -2,7 +2,6 @@ import { SkillCard } from "./skillCard";
 import Styles from "./style.module.css";
 import { motion } from "framer-motion";
 import { SpringSvg } from "./Icons/spring";
-import { SpringBootSvg } from "./Icons/spring-boot";
 import { JSX } from "react";
 import { CPlusPlusSvg } from "./Icons/cplusplus";
 import { AwsSvg } from "./Icons/aws";
