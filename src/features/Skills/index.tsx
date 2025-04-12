@@ -11,6 +11,10 @@ import { JavaSvg } from "./Icons/java";
 import { GitSvg } from "./Icons/git";
 import { DockerSvg } from "./Icons/docker";
 import { HtmlSvg } from "./Icons/html";
+import { OopSvg } from "./Icons/oop.";
+import { PostgreSqlSvg } from "./Icons/postgresql";
+import { CSvg } from "./Icons/c";
+import { CssSvg } from "./Icons/css";
 
 export type Skill = {
   name: string;
@@ -52,19 +56,19 @@ const skillList: Skill[] = [
     ],
   },
   {
-    name: "Git",
-    icon: <GitSvg />,
+    name: "OOP",
+    icon: <OopSvg />,
     knowledgeList: [
-      "Branching",
-      "Merging",
-      "Rebase",
-      "Stashing",
-      "Cherry-pick",
-      "Git Hooks",
-      "Git Flow",
-      "Submodules",
-      "Reverting",
-      "Conflict Resolution",
+      "Encapsulation",
+      "Abstraction",
+      "Inheritance",
+      "Polymorphism",
+      "Composition",
+      "Interfaces",
+      "SOLID Principles",
+      "Design Patterns",
+      "Coupling & Cohesion",
+      "UML Diagrams",
     ],
   },
   {
@@ -84,6 +88,22 @@ const skillList: Skill[] = [
     ],
   },
   {
+    name: "Git",
+    icon: <GitSvg />,
+    knowledgeList: [
+      "Branching",
+      "Merging",
+      "Rebase",
+      "Stashing",
+      "Cherry-pick",
+      "Git Hooks",
+      "Git Flow",
+      "Submodules",
+      "Reverting",
+      "Conflict Resolution",
+    ],
+  },
+  {
     name: "Linux",
     icon: <TuxSvg />,
     knowledgeList: [
@@ -97,6 +117,38 @@ const skillList: Skill[] = [
       "SSH",
       "Logs & Journald",
       "Process Management",
+    ],
+  },
+  {
+    name: "PostgreSQL",
+    icon: <PostgreSqlSvg />,
+    knowledgeList: [
+      "SQL Queries",
+      "Indexes",
+      "Joins",
+      "Transactions",
+      "Views",
+      "Stored Procedures",
+      "Triggers",
+      "Extensions (e.g. PostGIS)",
+      "Backup & Restore",
+      "Query Optimization",
+    ],
+  },
+  {
+    name: "AWS",
+    icon: <AwsSvg />,
+    knowledgeList: [
+      "EC2",
+      "S3",
+      "RDS",
+      "Lambda",
+      "VPC",
+      "IAM",
+      "CloudWatch",
+      "Elastic Beanstalk",
+      "Route 53",
+      "CloudFormation",
     ],
   },
   {
@@ -117,7 +169,7 @@ const skillList: Skill[] = [
   },
   {
     name: "CSS",
-    icon: <SpringSvg />,
+    icon: <CssSvg />,
     knowledgeList: [
       "Flexbox",
       "Grid",
@@ -132,24 +184,8 @@ const skillList: Skill[] = [
     ],
   },
   {
-    name: "AWS",
-    icon: <AwsSvg />,
-    knowledgeList: [
-      "EC2",
-      "S3",
-      "RDS",
-      "Lambda",
-      "VPC",
-      "IAM",
-      "CloudWatch",
-      "Elastic Beanstalk",
-      "Route 53",
-      "CloudFormation",
-    ],
-  },
-  {
     name: "C",
-    icon: <SpringBootSvg />,
+    icon: <CSvg />,
     knowledgeList: [
       "Pointers",
       "Memory Management",
@@ -178,39 +214,7 @@ const skillList: Skill[] = [
       "RAII",
       "C++11/14/17 Features",
     ],
-  },
-  {
-    name: "OOP",
-    icon: <SpringSvg />,
-    knowledgeList: [
-      "Encapsulation",
-      "Abstraction",
-      "Inheritance",
-      "Polymorphism",
-      "Composition",
-      "Interfaces",
-      "SOLID Principles",
-      "Design Patterns",
-      "Coupling & Cohesion",
-      "UML Diagrams",
-    ],
-  },
-  {
-    name: "PostgreSQL",
-    icon: <SpringBootSvg />,
-    knowledgeList: [
-      "SQL Queries",
-      "Indexes",
-      "Joins",
-      "Transactions",
-      "Views",
-      "Stored Procedures",
-      "Triggers",
-      "Extensions (e.g. PostGIS)",
-      "Backup & Restore",
-      "Query Optimization",
-    ],
-  },
+  }
 ];
 
 
@@ -226,7 +230,7 @@ export const Skills = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true, amount: 1 }}
+            viewport={{ once: true, amount: 0.8 }}
           >
             <SkillCard skill={skill} />
           </motion.div>
