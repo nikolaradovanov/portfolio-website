@@ -1,9 +1,16 @@
-import { SkillCard } from "./SkillCard";
+import { SkillCard } from "./skillCard";
 import Styles from "./style.module.css";
 import { motion } from "framer-motion";
 import { SpringSvg } from "./Icons/spring";
 import { SpringBootSvg } from "./Icons/spring-boot";
 import { JSX } from "react";
+import { CPlusPlusSvg } from "./Icons/cplusplus";
+import { AwsSvg } from "./Icons/aws";
+import { TuxSvg } from "./Icons/tux";
+import { JavaSvg } from "./Icons/java";
+import { GitSvg } from "./Icons/git";
+import { DockerSvg } from "./Icons/docker";
+import { HtmlSvg } from "./Icons/html";
 
 export type Skill = {
   name: string;
@@ -13,40 +20,199 @@ export type Skill = {
 
 const skillList: Skill[] = [
   {
-    name: "JavaScript",
+    name: "Spring",
     icon: <SpringSvg />,
     knowledgeList: [
-      "Vite",
-      "Jest",
-      "Cypress",
-      "Firebase",
-      "Azure",
-      "AWS",
-      "Kubernetes",
-      "Terraform",
-      "RabbitMQ",
-      "Elasticsearch",
-      "Redis",
-      "Socket.IO",
-      "Deno",
-      "Three.js",
-      "Electron",
-      "Figma",
-      "Storybook",
-      "Jira",
+      "Spring Boot",
+      "Spring Security",
+      "Spring Data JPA",
+      "Spring MVC",
+      "Spring Cloud",
+      "Spring AOP",
+      "Spring Batch",
+      "Spring WebFlux",
+      "Actuator",
+      "Thymeleaf",
     ],
   },
-  { name: "HTML", icon: <SpringSvg />, knowledgeList: ["CSS", "JavaScript"] },
-  { name: "CSS", icon: <SpringSvg />, knowledgeList: ["HTML", "JavaScript"] },
-  { name: "TypeScript", icon: <SpringSvg />, knowledgeList: ["JavaScript"] },
-  { name: "React", icon: <SpringSvg />, knowledgeList: ["JavaScript"] },
-  { name: "Node.js", icon: <SpringSvg />, knowledgeList: ["JavaScript"] },
-  { name: "Python", icon: <SpringSvg />, knowledgeList: ["JavaScript"] },
-  { name: "Java", icon: <SpringBootSvg />, knowledgeList: ["JavaScript"] },
-  { name: "Linux", icon: <SpringBootSvg />, knowledgeList: ["JavaScript"] },
-  { name: "Git", icon: <SpringBootSvg />, knowledgeList: ["JavaScript"] },
-  { name: "Docker", icon: <SpringBootSvg />, knowledgeList: ["JavaScript"] },
+  {
+    name: "Java",
+    icon: <JavaSvg />,
+    knowledgeList: [
+      "Streams API",
+      "Collections Framework",
+      "Multithreading",
+      "JVM Internals",
+      "Garbage Collection",
+      "Lambdas",
+      "Java 8+ Features",
+      "JUnit",
+      "Maven",
+      "Gradle",
+    ],
+  },
+  {
+    name: "Git",
+    icon: <GitSvg />,
+    knowledgeList: [
+      "Branching",
+      "Merging",
+      "Rebase",
+      "Stashing",
+      "Cherry-pick",
+      "Git Hooks",
+      "Git Flow",
+      "Submodules",
+      "Reverting",
+      "Conflict Resolution",
+    ],
+  },
+  {
+    name: "Docker",
+    icon: <DockerSvg />,
+    knowledgeList: [
+      "Dockerfile",
+      "Images & Containers",
+      "Volumes",
+      "Docker Compose",
+      "Networking",
+      "Docker Swarm",
+      "Multi-stage Builds",
+      "Container Logs",
+      "Healthchecks",
+      "Docker Hub",
+    ],
+  },
+  {
+    name: "Linux",
+    icon: <TuxSvg />,
+    knowledgeList: [
+      "File System",
+      "Permissions",
+      "Bash Scripting",
+      "Systemd",
+      "Networking",
+      "Cron Jobs",
+      "Package Managers",
+      "SSH",
+      "Logs & Journald",
+      "Process Management",
+    ],
+  },
+  {
+    name: "HTML",
+    icon: <HtmlSvg />,
+    knowledgeList: [
+      "Semantic HTML",
+      "Forms",
+      "Media Elements",
+      "Canvas & SVG",
+      "Accessibility (ARIA)",
+      "Meta Tags",
+      "HTML5 APIs",
+      "Tables",
+      "Iframes",
+      "DOCTYPE",
+    ],
+  },
+  {
+    name: "CSS",
+    icon: <SpringSvg />,
+    knowledgeList: [
+      "Flexbox",
+      "Grid",
+      "Animations",
+      "Responsive Design",
+      "Variables",
+      "Selectors",
+      "Pseudo-classes",
+      "Media Queries",
+      "Preprocessors (Sass)",
+      "BEM Naming",
+    ],
+  },
+  {
+    name: "AWS",
+    icon: <AwsSvg />,
+    knowledgeList: [
+      "EC2",
+      "S3",
+      "RDS",
+      "Lambda",
+      "VPC",
+      "IAM",
+      "CloudWatch",
+      "Elastic Beanstalk",
+      "Route 53",
+      "CloudFormation",
+    ],
+  },
+  {
+    name: "C",
+    icon: <SpringBootSvg />,
+    knowledgeList: [
+      "Pointers",
+      "Memory Management",
+      "Structs",
+      "File I/O",
+      "Preprocessors",
+      "Bitwise Operations",
+      "Dynamic Allocation",
+      "Compiling & Linking",
+      "Header Files",
+      "C Standard Library",
+    ],
+  },
+  {
+    name: "C++",
+    icon: <CPlusPlusSvg/>,
+    knowledgeList: [
+      "OOP",
+      "STL",
+      "Templates",
+      "Smart Pointers",
+      "Exception Handling",
+      "Operator Overloading",
+      "Inheritance",
+      "Polymorphism",
+      "RAII",
+      "C++11/14/17 Features",
+    ],
+  },
+  {
+    name: "OOP",
+    icon: <SpringSvg />,
+    knowledgeList: [
+      "Encapsulation",
+      "Abstraction",
+      "Inheritance",
+      "Polymorphism",
+      "Composition",
+      "Interfaces",
+      "SOLID Principles",
+      "Design Patterns",
+      "Coupling & Cohesion",
+      "UML Diagrams",
+    ],
+  },
+  {
+    name: "PostgreSQL",
+    icon: <SpringBootSvg />,
+    knowledgeList: [
+      "SQL Queries",
+      "Indexes",
+      "Joins",
+      "Transactions",
+      "Views",
+      "Stored Procedures",
+      "Triggers",
+      "Extensions (e.g. PostGIS)",
+      "Backup & Restore",
+      "Query Optimization",
+    ],
+  },
 ];
+
 
 export const Skills = () => {
   return (
