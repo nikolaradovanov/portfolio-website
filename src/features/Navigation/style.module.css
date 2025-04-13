@@ -51,3 +51,79 @@
 .navContainer .navActions svg:hover {
   fill: var(--white);
 }
+
+@media (max-width: 1024px) {
+  .navContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .navContainer .navActions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .navContainer .navActions .navigationLinks {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-size: 20px;
+  }
+
+  .navContainer .logoName {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navContainer {
+    padding: 15px;
+  }
+
+  .navContainer .navActions {
+    display: none;
+  }
+
+  .navContainer .logoName {
+    font-size: 24px;
+  }
+
+  .navContainer .navActions .navigationLinks {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navContainer .navActions .navigationLinks a {
+    font-size: 20px;
+  }
+
+  .navContainer .navActions {
+    gap: 15px;
+  }
+
+  .navContainer .navActions svg {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .navContainer .navActions {
+    display: none;
+  }
+  .navContainer .navActions .navigationLinks {
+    font-size: 18px;
+  }
+
+  .navContainer .navActions .navigationLinks a {
+    font-size: 18px;
+  }
+
+  .navContainer .logoName {
+    font-size: 20px;
+  }
+}

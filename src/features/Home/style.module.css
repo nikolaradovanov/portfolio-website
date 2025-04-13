@@ -117,3 +117,93 @@
   color: var(--primary);
   width: 20%;
 }
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    padding: 30px;
+    gap: 40px;
+  }
+
+  .container .centralContent {
+    width: 100%;
+    text-align: center;
+  }
+
+  .container .rightSide {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 20px;
+  }
+
+  .container .rightSide .textItem {
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .container .leftSide {
+    border-radius: 40px;
+    padding: 20px;
+  }
+
+  .container .leftSide .cardName {
+    font-size: 20px;
+  }
+
+  .container .centralContent .mainText {
+    font-size: 32px;
+  }
+
+  .container .centralContent .contactText p {
+    font-size: 24px;
+  }
+
+  .container .rightSide .textItem .yearsTextNumber {
+    font-size: 36px;
+  }
+
+  .container .rightSide .textItem .yearsText {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container .centralContent .mainText {
+    font-size: 24px;
+  }
+
+  .container .centralContent .contactText p {
+    font-size: 20px;
+  }
+
+  .container .rightSide .textItem {
+    width: 100%;
+  }
+
+  .container .rightSide {
+    padding: 20px;
+  }
+
+  .container .rightSide .textItem .yearsTextNumber {
+    font-size: 30px;
+  }
+
+  .container .rightSide .textItem .yearsText {
+    font-size: 14px;
+  }
+}
