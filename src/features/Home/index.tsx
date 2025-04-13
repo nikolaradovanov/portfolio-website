@@ -41,9 +41,11 @@ export const Home = () => {
               <p className={Styles.cardItemText}>Open to work</p>
             </div>
           </div>
-          <Button className={Styles.downloadBtn} variant="contained" endIcon={<FileDownloadOutlined />}>
-            Download CV
-          </Button>
+          <a href="/CV.pdf" download style={{ textDecoration: "none" }}>
+            <Button className={Styles.downloadBtn} variant="contained" endIcon={<FileDownloadOutlined />}>
+              Download CV
+            </Button>
+          </a>
         </div>
         <div className={Styles.centralContent}>
           <div className={Styles.mainText}>
@@ -60,12 +62,12 @@ export const Home = () => {
           </div>
           <div className={Styles.subText}>
             <p>
-            I make awesome websites, check them out in  project section! Lorem ipsum, dolor sit amet consectetur 
-          </p>
+              I make awesome websites, check them out in  project section! Lorem ipsum, dolor sit amet consectetur
+            </p>
           </div>
           <div className={Styles.contactText}>
             <p>
-              Contact me 
+              Contact me
             </p>
             <NearMe fontSize="large"></NearMe>
           </div>
